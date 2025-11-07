@@ -93,39 +93,29 @@
     </style>
 </head>
 
-      
-        <!-- Header Section -->
-<header
-  class="p-4 xl:p-6 bg-marine-dark text-text-dark text-center text-sm rounded-t-xl mx-auto w-full max-w-7xl mb-4 border-t border-marine-light backdrop-blur-sm bg-opacity-80">
-  <div class="flex flex-col items-center space-y-2">
-    <span class="text-4xl xl:text-5xl font-bold text-marine-accent">
-      Welcome to MineRise — Your Adventure Starts Here.
-    </span>
-  </div>
-</header>
-
-    </div>
-
-
-
 <body>
+    <!-- Header Section -->
+    <header
+        class="p-4 xl:p-6 bg-marine-dark text-text-dark text-center text-sm rounded-t-xl mx-auto w-full max-w-7xl mb-4 border-t border-marine-light backdrop-blur-sm bg-opacity-80">
+        <div class="flex flex-col items-center space-y-2">
+            <span class="text-4xl xl:text-5xl font-bold text-marine-accent">
+                Welcome to MineRise — Your Adventure Starts Here.
+            </span>
+        </div>
+    </header>
+
     <div class="overlay">
         <main class="flex-grow flex items-center justify-center p-4">
             <div class="flex flex-col items-center space-y-8 max-w-5xl w-full">
 
                 <!-- Navigation -->
                 <nav class="flex flex-wrap justify-center gap-4 mt-8 mb-40">
-                    
-
                     <a href="rules.html" class="nav-button nav-button-secondary bg-marine-dark border-[1px] border-marine-light backdrop-blur-sm bg-opacity-80">Rules</a>
-                    <a href="file:///E:/MineRise/website/store.html" target="_blank" rel="noopener noreferrer"
-                        class="nav-button nav-button-primary bg-marine-dark border-[1px] border-marine-light backdrop-blur-sm bg-opacity-80">Store</a>
+                    <a href="store.html" class="nav-button nav-button-primary bg-marine-dark border-[1px] border-marine-light backdrop-blur-sm bg-opacity-80">Store</a>
                     <a href="staff.html" class="nav-button nav-button-secondary bg-marine-dark border-[1px] border-marine-light backdrop-blur-sm bg-opacity-80">Staff</a>
-
                 </nav>
 
-                <div
-                    class="grid grid-cols-1 xl:grid-cols-3 items-center text-center gap-y-12 xl:gap-x-24 w-full px-4 mb-8">
+                <div class="grid grid-cols-1 xl:grid-cols-3 items-center text-center gap-y-12 xl:gap-x-24 w-full px-4 mb-8">
                     <!-- Players -->
                     <div class="flex flex-col items-center space-y-2">
                         <span id="playerCount" class="text-4xl xl:text-5xl font-bold text-marine-accent">0/0</span>
@@ -134,13 +124,10 @@
                             onclick="copyToClipboard(this.textContent, 'Server ip copied to clipboard:')">Play.MineRise.fun</span>
                     </div>
 
-<!-- Logo -->
-<div class="flex justify-center mb-[30px]">
-  <img src="Logo.png" alt="Server Logo" class="rounded-lg shadow-inner">
-</div>
-
-
-
+                    <!-- Logo -->
+                    <div class="flex justify-center mb-[30px]">
+                        <img src="Logo.png" alt="Server Logo" class="rounded-lg shadow-inner">
+                    </div>
 
                     <!-- Discord -->
                     <div class="flex flex-col items-center space-y-2">
@@ -151,73 +138,44 @@
                     </div>
                 </div>
 
-
-
-
                 <!-- Social Media -->
                 <div class="flex justify-center gap-4 mt-8">
-                     <a href="https://discord.gg/bmG8N3ma8S" target="_blank" rel="noopener noreferrer"
-                        class="social-icon">
-                        <!-- Discord icon SVG -->
+                    <a href="https://discord.gg/bmG8N3ma8S" target="_blank" rel="noopener noreferrer" class="social-icon">
                         <svg class="w-10 h-10 text-text-light" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                              <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
-
+                            <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
                         </svg>
                     </a>
-                    
-                   
-                    <a href="https://www.tiktok.com/@minerise" target="_blank" rel="noopener noreferrer"
-                        class="social-icon">
-                        <!-- TikTok icon SVG -->
+                    <a href="https://www.tiktok.com/@minerise" target="_blank" rel="noopener noreferrer" class="social-icon">
                         <svg class="w-10 h-10 text-text-light" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                              <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
-
+                            <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
                         </svg>
                     </a>
-
-                        </svg>
-                    </a>
-                    <a href="https://www.youtube.com/@MineRiseOriginal/" target="_blank" rel="noopener noreferrer"
-                        class="social-icon">
-                        <!-- YouTube icon SVG -->
+                    <a href="https://www.youtube.com/@MineRiseOriginal/" target="_blank" rel="noopener noreferrer" class="social-icon">
                         <svg class="w-10 h-10 text-text-light" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
-
+                            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
                         </svg>
                     </a>
-                    <a href="https://www.instagram.com/mineriseofc/" target="_blank" rel="noopener noreferrer"
-                        class="social-icon">
-                        <!-- Instagram icon SVG -->
+                    <a href="https://www.instagram.com/mineriseofc/" target="_blank" rel="noopener noreferrer" class="social-icon">
                         <svg class="w-10 h-10 text-text-light" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
                         </svg>
                     </a>
-                    
                 </div>
             </div>
         </main>
 
-<!-- Footer Section -->
-<footer
-    class="p-4 xl:p-6 bg-marine-dark text-text-dark text-center text-sm rounded-t-xl mx-auto w-full max-w-7xl mb-4 border-t border-marine-light backdrop-blur-sm bg-opacity-80">
-    <p>&copy; 2025 MineRise. All rights reserved. | Designed and powered by the MineRise Development Team.</p>
-    <p class="mt-2">MineRise — Built for the best, by the best.</p>
-</footer>
-
+        <!-- Footer Section -->
+        <footer
+            class="p-4 xl:p-6 bg-marine-dark text-text-dark text-center text-sm rounded-t-xl mx-auto w-full max-w-7xl mb-4 border-t border-marine-light backdrop-blur-sm bg-opacity-80">
+            <p>&copy; 2025 MineRise. All rights reserved. | Designed and powered by the MineRise Development Team.</p>
+            <p class="mt-2">MineRise — Built for the best, by the best.</p>
+        </footer>
+    </div>
 
     <!-- Background changing script -->
-    <!-- 
-        Make sure all the images has the same aspect ratio (16:9 recommended)
-        Add your background images in the "backgrounds" array below
-
-        If you want to disable the background changing feature, remove this script
-        or comment it out.
-    -->
     <script>
         const backgrounds = [
             '/img/backgrounds/background1.png',
-            // Add more backgrounds as needed,
         ];
 
         let currentIndex = 0;
@@ -230,9 +188,9 @@
 
         setInterval(changeBackground, 15000);
     </script>
+
     <script>
         function copyToClipboard(text, message) {
-
             const textArea = document.createElement("textarea");
             textArea.value = text;
             textArea.style.position = "fixed";
@@ -251,7 +209,6 @@
             document.body.removeChild(textArea);
         }
 
-
         function showNotification(message) {
             const notification = document.createElement('div');
             notification.textContent = message;
@@ -260,8 +217,8 @@
                 bottom: 20px;
                 left: 50%;
                 transform: translateX(-50%);
-                background-color: #0ea5e9; /* marine-accent */
-                color: #f8fafc; /* text-light */
+                background-color: #0ea5e9;
+                color: #f8fafc;
                 padding: 12px 20px;
                 border-radius: 8px;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -271,11 +228,9 @@
             `;
             document.body.appendChild(notification);
 
-
             setTimeout(() => {
                 notification.style.opacity = '1';
             }, 10);
-
 
             setTimeout(() => {
                 notification.style.opacity = '0';
@@ -284,7 +239,6 @@
         }
 
         document.addEventListener('DOMContentLoaded', async () => {
-            // Player Count
             await fetch('https://api.mcstatus.io/v2/status/java/Play.MineRise.com')
                 .then(res => res.json())
                 .then(data => {
@@ -296,7 +250,6 @@
                     document.getElementById('playerCount').textContent = `100+/17000`;
                 });
 
-            // Discord Users Count
             await fetch('https://discord.com/api/guilds/1409941131684352066/widget.json')
                 .then(res => res.json())
                 .then(data => {

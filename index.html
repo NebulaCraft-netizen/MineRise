@@ -1,122 +1,97 @@
+<!--
+    (c) MineRise 2025
+-->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MineRise - Minecraft Server</title>
-
-  <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- ✅ Favicon (tab logo) -->
-  <link rel="icon" type="image/png" href="logo.png">
-  <link rel="shortcut icon" type="image/png" href="logo.png">
+  <!-- ✅ Favicon (browser tab logo) -->
+  <link rel="icon" type="image/png" href="logo.png"
+>
 
-  <!-- ✅ Tailwind config -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'marine-dark': '#0f172a',
-            'marine-medium': '#1e293b',
-            'marine-light': '#334155',
-            'marine-accent': '#0ea5e9',
-            'text-light': '#f8fafc',
-            'text-dark': '#cbd5e1',
-            'marine-darker': '#0a101e',
-          },
-          fontFamily: {
-            sans: ['Poppins', 'sans-serif'],
-          },
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'marine-dark': '#0f172a',
+                        'marine-medium': '#1e293b',
+                        'marine-light': '#334155',
+                        'marine-accent': '#0ea5e9',
+                        'text-light': '#f8fafc',
+                        'text-dark': '#cbd5e1',
+                        'marine-darker': '#0a101e',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
 
-  <!-- ✅ Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
-  <!-- ✅ Styles (no animations, smooth loading) -->
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0f172a;
-      color: #f8fafc;
-      background-image: url('background1.png');
-      background-size: cover;
-      background-position: center center;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      opacity: 0;
-      animation: fadeIn 0.5s ease-in-out forwards;
-    }
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            background-image: url('background1.png') !important;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: none !important;
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+        .overlay {
+            background-color: rgba(15, 23, 42, 0.7);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-    .overlay {
-      background-color: rgba(15, 23, 42, 0.7);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+        .nav-button {
+            @apply border-marine-light backdrop-blur-sm bg-opacity-80;
+            padding-left: 26px;
+            padding-right: 26px;
+            padding-bottom: 13px;
+            padding-top: 13px;
+            border-radius: 100px;
+        }
 
-    .nav-button {
-      padding: 13px 26px;
-      border-radius: 100px;
-      backdrop-filter: blur(6px);
-      transition: transform 0.2s ease;
-    }
+        .nav-button-secondary {
+            @apply bg-marine-dark bg-marine-medium hover:bg-marine-darker;
+        }
 
-    .nav-button-primary {
-      background-color: #0ea5e9;
-    }
+        .nav-button-primary {
+            @apply bg-marine-accent hover:bg-sky-600 transform hover:scale-105 active:scale-95;
+        }
 
-    .nav-button-primary:hover {
-      background-color: #0284c7;
-      transform: scale(1.05);
-    }
+        .clickable-text-copy {
+            @apply cursor-pointer hover:text-marine-accent transition-colors duration-200;
+        }
 
-    .nav-button-secondary {
-      background-color: #1e293b;
-    }
-
-    .clickable-text-copy {
-      cursor: pointer;
-      transition: color 0.2s ease;
-    }
-
-    .clickable-text-copy:hover {
-      color: #0ea5e9;
-    }
-
-    .social-icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 9999px;
-      background-color: #1e293b;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .social-icon:hover {
-      background-color: #334155;
-      transform: scale(1.1);
-    }
-  </style>
+        .social-icon {
+            @apply w-10 h-10 flex items-center justify-center rounded-full bg-marine-medium hover:bg-marine-darker transition-colors duration-300 shadow-md;
+        }
+    </style>
 </head>
 
 <body>
@@ -290,5 +265,3 @@
 </body>
 
 </html>
-
-

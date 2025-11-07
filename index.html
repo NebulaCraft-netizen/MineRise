@@ -1,16 +1,10 @@
-<!--
-    (c) MineRise 2025
--->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MineRise - Minecraft Server</title>
+    <title>MineRise - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- ✅ Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <script>
@@ -34,19 +28,14 @@
         }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* === Base Styling === */
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #0f172a;
             color: #f8fafc;
-            background-image: url('background1.png');
+            background-image: url('background1.png') !important;
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
@@ -55,8 +44,6 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            overflow-x: hidden;
-            transition: none !important;
         }
 
         .overlay {
@@ -68,173 +55,71 @@
         }
 
         .nav-button {
-            @apply border-marine-light backdrop-blur-sm bg-opacity-80;
             padding: 13px 26px;
             border-radius: 100px;
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            color: #f8fafc;
+            text-decoration: none;
         }
 
-        .nav-button-secondary {
-            @apply bg-marine-dark bg-marine-medium hover:bg-marine-darker;
+        .nav-button:hover {
+            background-color: #0ea5e9;
+            color: #ffffff;
         }
 
-        .nav-button-primary {
-            @apply bg-marine-accent hover:bg-sky-600 transform hover:scale-105 active:scale-95;
+        footer {
+            background-color: rgba(15, 23, 42, 0.85);
+            border-top: 1px solid #334155;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.875rem;
+            color: #cbd5e1;
         }
 
-        .clickable-text-copy {
-            @apply cursor-pointer hover:text-marine-accent transition-colors duration-200;
+        footer p {
+            margin: 0.25rem 0;
         }
 
-        .social-icon {
-            @apply w-10 h-10 flex items-center justify-center rounded-full bg-marine-medium hover:bg-marine-darker transition-colors duration-300 shadow-md;
+        .content {
+            text-align: center;
+            padding: 2rem;
         }
 
-        /* === Smooth Scroll Animations === */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
-        }
-
-        .animate-on-scroll.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .animate-up { transform: translateY(60px); }
-        .animate-down { transform: translateY(-60px); }
-        .animate-left { transform: translateX(-60px); }
-        .animate-right { transform: translateX(60px); }
-
-        .animate-up.show,
-        .animate-down.show,
-        .animate-left.show,
-        .animate-right.show {
-            opacity: 1;
-            transform: translate(0, 0);
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* === Loading Overlay === */
-        #loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #0f172a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            z-index: 9999;
-            opacity: 1;
-            transition: opacity 1s ease-in-out;
-        }
-
-        #loading-logo {
-            width: 140px;
-            animation: fadeInUp 1.8s ease-in-out infinite alternate;
-        }
-
-        #loading-text {
+        .title {
+            font-size: 4rem;
+            font-weight: 800;
             color: #0ea5e9;
-            font-size: 1.2rem;
-            margin-top: 20px;
-            opacity: 0.9;
+            margin-bottom: 1rem;
         }
 
-        @keyframes fadeInUp {
-            from {
-                transform: translateY(15px);
-                opacity: 0.6;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        .subtitle {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
         }
     </style>
 </head>
 
 <body>
-    <!-- 🔵 Loading Screen -->
-    <div id="loading-screen">
-        <img src="Logo.png" alt="MineRise Logo" id="loading-logo">
-        <p id="loading-text">Loading MineRise...</p>
-    </div>
-
-    <!-- Header Section -->
-    <header class="p-4 xl:p-6 bg-marine-dark text-text-dark text-center text-sm rounded-t-xl mx-auto w-full max-w-7xl mb-4 border-t border-marine-light backdrop-blur-sm bg-opacity-80 animate-on-scroll animate-down">
-        <div class="flex flex-col items-center space-y-2">
-            <span class="text-4xl xl:text-5xl font-bold text-marine-accent">
-                Welcome to MineRise — Your Adventure Starts Here.
-            </span>
-        </div>
-    </header>
-
     <div class="overlay">
-        <main class="flex-grow flex items-center justify-center p-4">
-            <div class="flex flex-col items-center space-y-8 max-w-5xl w-full">
+        <header class="p-4 flex justify-center space-x-4">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="rules.html" class="nav-button">Rules</a>
+        </header>
 
-                <!-- Navigation -->
-                <nav class="flex flex-wrap justify-center gap-4 mt-8 mb-40 animate-on-scroll animate-up">
-                    <a href="rules.html" class="nav-button nav-button-secondary bg-marine-dark border-[1px] border-marine-light backdrop-blur-sm bg-opacity-80">Rules</a>
-                    <a href="store.html" class="nav-button nav-button-primary bg-marine-dark border-[1px] border-marine-light backdrop-blur-sm bg-opacity-80">Store</a>
-                    <a href="staff.html" class="nav-button nav-button-secondary bg-marine-dark border-[1px] border-marine-light backdrop-blur-sm bg-opacity-80">Staff</a>
-                </nav>
-
-                <div class="grid grid-cols-1 xl:grid-cols-3 items-center text-center gap-y-12 xl:gap-x-24 w-full px-4 mb-8">
-                    <!-- Players -->
-                    <div class="flex flex-col items-center space-y-2 animate-on-scroll animate-left">
-                        <span id="playerCount" class="text-4xl xl:text-5xl font-bold text-marine-accent">0/0</span>
-                        <span class="text-text-light text-xl">Online Players</span>
-                        <span id="minecraftIpText" class="text-text-dark text-lg clickable-text-copy"
-                            onclick="copyToClipboard(this.textContent, 'Server ip copied to clipboard:')">Play.MineRise.fun</span>
-                    </div>
-
-                    <!-- Logo -->
-                    <div class="flex justify-center mb-[30px] animate-on-scroll animate-up">
-                        <img src="Logo.png" alt="Server Logo" class="rounded-lg shadow-inner">
-                    </div>
-
-                    <!-- Discord -->
-                    <div class="flex flex-col items-center space-y-2 animate-on-scroll animate-right">
-                        <span id="discordUsersCount" class="text-4xl xl:text-5xl font-bold text-marine-accent">0</span>
-                        <span class="text-text-light text-xl">Discord users</span>
-                        <span id="discordLinkText" class="text-text-dark text-lg clickable-text-copy"
-                            onclick="copyToClipboard(this.textContent, 'Discord url copied:')">https://discord.gg/bmG8N3ma8S</span>
-                    </div>
-                </div>
-
-                <!-- Social Media -->
-                <div class="flex justify-center gap-4 mt-8 animate-on-scroll animate-up">
-                    <a href="https://discord.gg/bmG8N3ma8S" target="_blank" rel="noopener noreferrer" class="social-icon">
-                        <svg class="w-10 h-10 text-text-light" fill="currentColor" viewBox="0 0 24 24"><path d="M13.545 2.907..."/></svg>
-                    </a>
-                    <a href="https://www.tiktok.com/@minerise" target="_blank" rel="noopener noreferrer" class="social-icon">
-                        <svg class="w-10 h-10 text-text-light" fill="currentColor" viewBox="0 0 24 24"><path d="M9 0h1.98..."/></svg>
-                    </a>
-                    <a href="https://www.youtube.com/@MineRiseOriginal/" target="_blank" rel="noopener noreferrer" class="social-icon">
-                        <svg class="w-10 h-10 text-text-light" fill="currentColor" viewBox="0 0 24 24"><path d="M8.051 1.999..."/></svg>
-                    </a>
-                    <a href="https://www.instagram.com/mineriseofc/" target="_blank" rel="noopener noreferrer" class="social-icon">
-                        <svg class="w-10 h-10 text-text-light" fill="currentColor" viewBox="0 0 24 24"><path d="M8 0C5.829..."/></svg>
-                    </a>
-                </div>
+        <main class="flex-grow flex items-center justify-center">
+            <div class="content">
+                <h1 class="title">Welcome to MineRise</h1>
+                <p class="subtitle">Built for the best, by the best.</p>
+                <p class="subtitle">Join us and rise through the ranks in the ultimate Minecraft experience.</p>
             </div>
         </main>
 
-        <!-- Footer -->
-        <footer class="p-4 xl:p-6 bg-marine-dark text-text-dark text-center text-sm rounded-t-xl mx-auto w-full max-w-7xl mb-4 border-t border-marine-light backdrop-blur-sm bg-opacity-80 animate-on-scroll animate-up">
-            <p>&copy; 2025 MineRise. All rights reserved. | Designed and powered by the MineRise Development Team.</p>
-            <p class="mt-2">MineRise — Built for the best, by the best.</p>
+        <footer>
+            <p>© 2025 MineRise. All rights reserved. | Designed and powered by the MineRise Development Team.</p>
+            <p>MineRise — Built for the best, by the best.</p>
         </footer>
     </div>
-
-    <script src="animations.js"></script>
 </body>
 </html>

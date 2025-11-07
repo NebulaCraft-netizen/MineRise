@@ -1,17 +1,26 @@
-// === Smooth Scroll + Scroll Animations (No Mouse Movement) ===
+// === MineRise Animations ===
 
-// Wait until everything is ready
+// Page load fade-in
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loading-screen");
+    setTimeout(() => {
+        loader.style.opacity = "0";
+        setTimeout(() => loader.style.display = "none", 1000);
+    }, 1200);
+});
+
+// Scroll reveal animations
 document.addEventListener("DOMContentLoaded", () => {
-    // Add fade/slide animations for elements when scrolling
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    const elements = document.querySelectorAll('.animate-on-scroll');
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('show');
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.15 });
 
-    animatedElements.forEach(el => observer.observe(el));
+    elements.forEach(el => observer.observe(el));
 });

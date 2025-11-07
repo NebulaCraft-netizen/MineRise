@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineRise - Server Rules</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        
+                        'marine-dark': '#0f172a',
+                        'marine-medium': '#1e293b', 
+                        'marine-light': '#334155', 
+                        'marine-accent': '#0ea5e9', 
+                        'text-light': '#f8fafc', 
+                        'text-dark': '#cbd5e1', 
+                        'marine-darker': '#0a101e', 
+                    },
+                    fontFamily: {
+                        
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+        color: #f8fafc;
+        background-image: url('background2.png') !important;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .liquid-glass-container {
+        background-color: rgba(15, 23, 42, 0.7);
+        backdrop-filter: blur(8px);
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(51, 65, 85, 0.5);
+    }
+
+    .rule-category {
+        @apply mb-8;
+        padding: 15px;
+    }
+
+    .rule-category h2 {
+        @apply text-3xl font-bold text-marine-accent mb-4 border-b-2 border-marine-light pb-2;
+    }
+
+    .rule-category ul {
+        @apply list-disc list-inside space-y-2;
+    }
+
+    .rule-category li {
+        @apply text-lg text-text-dark;
+    }
+
+    .rule-category li strong {
+        @apply text-text-light;
+    }
+</style>
+
+</head>
+<body>
+    <div class="flex-grow flex items-center justify-center p-4">
+        <div class="flex flex-col items-center space-y-8 max-w-4xl w-full mx-auto">
+
+            <header class="w-full text-center mb-8">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-marine-accent mb-4">
+                    Server Rules
+                </h1>
+                <p class="text-xl text-text-light max-w-2xl mx-auto">
+                    To ensure a fun and fair environment for everyone, please read and follow our server rules.
+                </p>
+                <a href="index.html" class="inline-block mt-6 px-6 py-3 rounded-full bg-marine-medium text-text-light text-lg font-semibold transition-colors duration-300 shadow-md hover:bg-marine-darker">
+                    &larr; Back to Main Page
+                </a>
+            </header>
+
+            <section class="liquid-glass-container w-full">
+                <div class="rule-category">
+                    <h2>General Conduct</h2>
+                    <ul>
+                        <li><strong>Be respectful:</strong> Treat all players and staff with respect. Harassment, discrimination, or hate speech will not be tolerated.</li>
+                        <li><strong>No spamming:</strong> Do not spam the chat or use excessive caps.</li>
+                        <li><strong>No advertising:</strong> Do not advertise other servers or websites.</li>
+                        <li><strong>English only in global chat:</strong> Please use English in global chat for moderation purposes.</li>
+                    </ul>
+                </div>
+
+                <div class="rule-category">
+                    <h2>Gameplay Rules</h2>
+                    <ul>
+                        <li><strong>No cheating/hacks:</strong> Use of any unauthorized modifications or software (e.g., X-ray, flying, speed hacks) is strictly forbidden.</li>
+                        <li><strong>WeStillDon'Tknowwhattomakeit</strong> uhh ya</li>
+                        <li><strong>Fair play:</strong> Do not exploit bugs or glitches for personal gain. Report them to staff immediately.</li>
+                        <li><strong>No inappropriate builds/names:</strong> Builds, skins, or usernames that are offensive or inappropriate are not allowed.</li>
+                    </ul>
+                </div>
+
+                <div class="rule-category">
+                    <h2>Punishments</h2>
+                    <ul>
+                        <li>Violations of these rules may result in warnings, temporary bans, or permanent bans, depending on the severity and frequency of the offense.</li>
+                        <li>Staff decisions are final.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+<!-- Footer Section -->
+<footer
+    class="p-4 xl:p-6 bg-marine-dark text-text-dark text-center text-sm rounded-t-xl mx-auto w-full max-w-7xl mb-4 border-t border-marine-light backdrop-blur-sm bg-opacity-80">
+    <p>&copy; 2025 MineRise. All rights reserved. | Designed and powered by the MineRise Development Team.</p>
+    <p class="mt-2">MineRise — Built for the best, by the best.</p>
+</footer>
+
+</body>
+</html>

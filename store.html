@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MineRise - Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'marine-dark': '#0f172a',
+            'marine-medium': '#1e293b',
+            'marine-light': '#334155',
+            'marine-accent': '#0ea5e9',
+            'text-light': '#f8fafc',
+            'text-dark': '#cbd5e1',
+            'marine-darker': '#0a101e',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url('background3.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .overlay {
+      background-color: rgba(15, 23, 42, 0.75);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay">
+    <!-- Header Section -->
+    <header
+      class="p-4 xl:p-6 bg-marine-dark text-text-dark text-center text-sm rounded-t-xl mx-auto w-full max-w-7xl mb-4 border-t border-marine-light backdrop-blur-sm bg-opacity-80">
+      <div class="flex flex-col items-center space-y-2">
+        <span class="text-4xl xl:text-5xl font-bold text-marine-accent">
+          Welcome to the MineRise Store — Power Up Your Adventure.
+        </span>
+      </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center p-4">
+      <div class="flex flex-col items-center space-y-8 max-w-5xl w-full">
+        <nav class="flex flex-wrap justify-center gap-4 mt-8 mb-40">
+          <a href="index.html" class="nav-button bg-marine-dark border border-marine-light backdrop-blur-sm bg-opacity-80 px-6 py-3 rounded-full">Home</a>
+          <a href="rules.html" class="nav-button bg-marine-dark border border-marine-light backdrop-blur-sm bg-opacity-80 px-6 py-3 rounded-full">Rules</a>
+          <a href="#" class="nav-button bg-marine-accent hover:bg-sky-600 transform hover:scale-105 active:scale-95 px-6 py-3 rounded-full">Store</a>
+          <a href="staff.html" class="nav-button bg-marine-dark border border-marine-light backdrop-blur-sm bg-opacity-80 px-6 py-3 rounded-full">Staff</a>
+     
+        </nav>
+
+        <!-- Store Logo -->
+        <div class="flex justify-center mb-[30px]">
+          <img src="Logo.png" alt="Server Logo" class="rounded-lg shadow-inner w-60 h-auto" />
+        </div>
+
+        <!-- Store Description -->
+        <section class="text-center max-w-2xl mx-auto">
+          <h2 class="text-3xl font-bold text-marine-accent mb-4">Support the Server</h2>
+          <p class="text-text-light text-lg mb-6">
+            Purchase exclusive ranks, items, and perks to enhance your gameplay experience and support the MineRise server's growth.
+          </p>
+          <a href="#" class="bg-marine-accent hover:bg-sky-600 text-white font-semibold py-3 px-6 rounded-full shadow-md transition transform hover:scale-105">
+            Visit Store
+          </a>
+        </section>
+      </div>
+    </main>
+
+<!-- Footer Section -->
+<footer
+    class="p-4 xl:p-6 bg-marine-dark text-text-dark text-center text-sm rounded-t-xl mx-auto w-full max-w-7xl mb-4 border-t border-marine-light backdrop-blur-sm bg-opacity-80">
+    <p>&copy; 2025 MineRise. All rights reserved. | Designed and powered by the MineRise Development Team.</p>
+    <p class="mt-2">MineRise — Built for the best, by the best.</p>
+</footer>
+
+  </div>
+</body>
+</html>

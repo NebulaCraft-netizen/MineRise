@@ -553,7 +553,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', async () => {
-            await fetch('https://api.mcstatus.io/v2/status/java/Play.MineRise.com')
+            await fetch('https://api.mcstatus.io/v2/status/java/minerise.cybernodes.org')
                 .then(res => res.json())
                 .then(data => {
                     const online = data.players.online;
@@ -561,7 +561,7 @@
                     document.getElementById('playerCount').textContent = `${online}/${max}`;
                 })
                 .catch(() => {
-                    document.getElementById('playerCount').textContent = `100+/17000`;
+                    document.getElementById('playerCount').textContent = `0`;
                 });
 
             await fetch('https://discord.com/api/guilds/1409941131684352066/widget.json')
@@ -577,5 +577,5 @@
 </body>
 
 </html>
-
+ 
 

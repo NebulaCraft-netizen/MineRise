@@ -1,112 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MineRise - Store</title>
- <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MineRise | Official Market</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<!-- ✅ Favicon (browser tab icon) -->
-<link rel="icon" type="image/png" href="logo.png">
-<link rel="shortcut icon" type="image/png" href="logo.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mine-dark': '#05070a',
+                        'mine-accent': '#0ea5e9',
+                        'mine-gold': '#f59e0b',
+                        'mine-red': '#ef4444',
+                        'paypal-blue': '#0070ba',
+                    },
+                },
+            },
+        };
+    </script>
 
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          'marine-dark': '#0f172a',
-          'marine-medium': '#1e293b',
-          'marine-light': '#334155',
-          'marine-accent': '#0ea5e9',
-          'text-light': '#f8fafc',
-          'text-dark': '#cbd5e1',
-          'marine-darker': '#0a101e',
-        },
-        fontFamily: {
-          sans: ['Poppins', 'sans-serif'],
-        },
-      },
-    },
-  };
-</script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at 50% 0%, #0f172a 0%, #05070a 100%);
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
 
+        .glass {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-image: url('background3.png');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      color: #f8fafc;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+        .glass:hover {
+            transform: translateY(-5px);
+            border-color: rgba(14, 165, 233, 0.4);
+        }
 
-    .overlay {
-      background-color: rgba(15, 23, 42, 0.75);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-  </style>
+        .popular-glow { border: 2px solid #0ea5e9 !important; }
+        
+        .paypal-btn {
+            background: #0070ba;
+            transition: 0.3s;
+        }
+
+        .paypal-btn:hover {
+            background: #005ea6;
+            transform: scale(1.02);
+        }
+
+        .support-hub-bg {
+            background: linear-gradient(90deg, rgba(14, 165, 233, 0.05) 0%, rgba(5, 7, 10, 0) 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .paypal-float {
+            filter: drop-shadow(0 0 30px rgba(0, 112, 186, 0.2));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+    </style>
 </head>
 
-<body>
-  <div class="overlay">
-    <!-- Header Section -->
-    <header
-      class="p-4 xl:p-6 bg-marine-dark text-text-dark text-center text-sm rounded-t-xl mx-auto w-full max-w-7xl mb-4 border-t border-marine-light backdrop-blur-sm bg-opacity-80">
-      <div class="flex flex-col items-center space-y-2">
-        <span class="text-4xl xl:text-5xl font-bold text-marine-accent">
-          Welcome to the MineRise Store — Power Up Your Adventure.
-        </span>
-      </div>
-    </header>
+<body class="min-h-screen">
 
-    <main class="flex-grow flex items-center justify-center p-4">
-      <div class="flex flex-col items-center space-y-8 max-w-5xl w-full">
-        <nav class="flex flex-wrap justify-center gap-4 mt-8 mb-40">
-          <a href="index.html" class="nav-button bg-marine-dark border border-marine-light backdrop-blur-sm bg-opacity-80 px-6 py-3 rounded-full">Home</a>
-          <a href="rules.html" class="nav-button bg-marine-dark border border-marine-light backdrop-blur-sm bg-opacity-80 px-6 py-3 rounded-full">Rules</a>
-          <a href="#" class="nav-button bg-marine-accent hover:bg-sky-600 transform hover:scale-105 active:scale-95 px-6 py-3 rounded-full">Store</a>
-          <a href="staff.html" class="nav-button bg-marine-dark border border-marine-light backdrop-blur-sm bg-opacity-80 px-6 py-3 rounded-full">Staff</a>
-     
-        </nav>
+    <nav class="sticky top-0 z-50 bg-mine-dark/80 backdrop-blur-md border-b border-white/5 px-8 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.png" alt="Logo" class="h-10 w-auto object-contain">
+                <span class="text-xl font-bold tracking-tighter uppercase italic">Mine<span class="text-mine-accent">Rise</span></span>
+            </a>
 
-        <!-- Store Logo -->
-        <div class="flex justify-center mb-[30px]">
-          <img src="Logo.png" alt="Server Logo" class="rounded-lg shadow-inner w-60 h-auto" />
+            <div class="flex gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
+                <a href="index.html" class="hover:text-mine-accent">Home</a>
+                <a href="rules.html" class="hover:text-mine-accent">Rules</a>
+                <a href="store.html" class="text-mine-accent">Store</a>
+                <a href="staff.html" class="hover:text-mine-accent">Staff</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-20">
+        
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-mine-accent">Active Collection</h2>
+                <div class="h-px flex-grow bg-white/5"></div>
+            </div>
+            
+            <div id="empty-inventory" class="text-center py-8 glass rounded-2xl border-dashed">
+                <p class="text-gray-500 text-[10px] font-bold uppercase tracking-widest italic">No items found in your local collection</p>
+            </div>
+
+            <div id="inventory-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 hidden">
+                </div>
         </div>
 
-        <!-- Store Description -->
-        <section class="text-center max-w-2xl mx-auto">
-          <h2 class="text-3xl font-bold text-marine-accent mb-4">Support the Server</h2>
-          <p class="text-text-light text-lg mb-6">
-            Purchase exclusive ranks, items, and perks to enhance your gameplay experience and support the MineRise server's growth.
-          </p>
-<a href="https://store.minerise.fun" class="bg-marine-accent hover:bg-sky-600 text-white font-semibold py-3 px-6 rounded-full shadow-md transition transform hover:scale-105">
-  Visit Store
-</a>
+        <header class="text-center mb-24">
+            <div id="currency-notice" class="inline-block px-4 py-1 rounded-full border border-mine-accent/20 bg-mine-accent/5 text-mine-accent text-[9px] font-black uppercase tracking-widest mb-6">
+                Detecting local currency...
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tight uppercase italic">
+                Mine<span class="text-mine-accent">Rise</span> Market
+            </h1>
+        </header>
 
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-32">
+            <div class="glass rounded-3xl p-8 flex flex-col items-center text-center">
+                <h3 class="text-xl font-black mb-4 uppercase italic tracking-tighter">Hunter</h3>
+                <div class="text-2xl font-black mb-6 price-tag" data-usd="0.99">$0.99</div>
+                <button onclick="buyItem('Hunter Rank', '0.99')" class="w-full paypal-btn py-4 rounded-2xl text-[10px] font-black uppercase text-white mt-auto">Buy Now</button>
+            </div>
 
-        </section>
-      </div>
+            <div class="glass rounded-3xl p-8 flex flex-col items-center text-center">
+                <h3 class="text-xl font-black mb-4 uppercase italic tracking-tighter">Knight</h3>
+                <div class="text-2xl font-black mb-6 price-tag" data-usd="2.49">$2.49</div>
+                <button onclick="buyItem('Knight Rank', '2.49')" class="w-full paypal-btn py-4 rounded-2xl text-[10px] font-black uppercase text-white mt-auto">Buy Now</button>
+            </div>
+
+            <div class="glass rounded-3xl p-8 flex flex-col items-center text-center">
+                <h3 class="text-xl font-black mb-4 uppercase italic tracking-tighter">Emperor</h3>
+                <div class="text-2xl font-black mb-6 price-tag" data-usd="4.99">$4.99</div>
+                <button onclick="buyItem('Emperor Rank', '4.99')" class="w-full paypal-btn py-4 rounded-2xl text-[10px] font-black uppercase text-white mt-auto">Buy Now</button>
+            </div>
+
+            <div class="glass popular-glow rounded-3xl p-8 flex flex-col items-center text-center relative bg-mine-accent/5">
+                <div class="absolute -top-3 bg-mine-accent text-white text-[8px] font-black px-3 py-1 rounded-full uppercase">Top Choice</div>
+                <h3 class="text-xl font-black mb-4 uppercase italic tracking-tighter">Champion</h3>
+                <div class="text-2xl font-black mb-6 text-mine-accent price-tag" data-usd="7.49">$7.49</div>
+                <button onclick="buyItem('Champion Rank', '7.49')" class="w-full paypal-btn py-4 rounded-2xl text-[10px] font-black uppercase text-white mt-auto">Buy Now</button>
+            </div>
+
+            <div class="glass rounded-3xl p-8 flex flex-col items-center text-center border-mine-red/20">
+                <h3 class="text-xl font-black mb-4 uppercase italic tracking-tighter text-mine-red">Overlord</h3>
+                <div class="text-2xl font-black mb-6 text-mine-red price-tag" data-usd="9.99">$9.99</div>
+                <button onclick="buyItem('Overlord Rank', '9.99')" class="w-full bg-mine-red hover:bg-red-600 py-4 rounded-2xl text-[10px] font-black uppercase text-white mt-auto transition-all">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="glass rounded-[3rem] p-12 text-center border-white/10 mb-32 relative overflow-hidden group">
+            <h2 class="text-3xl font-black uppercase italic mb-4">Server Support</h2>
+            <p class="text-gray-400 max-w-xl mx-auto mb-8 font-medium">
+                Donations help us keep the hardware running and the community growing.
+            </p>
+            <a href="https://paypal.me/MineRise" target="_blank" class="inline-flex items-center gap-4 bg-white text-black px-10 py-5 rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl">
+                Support via PayPal
+            </a>
+        </div>
     </main>
 
-<!-- Footer Section -->
-<footer
-    class="p-4 xl:p-6 bg-marine-dark text-text-dark text-center text-sm rounded-t-xl mx-auto w-full max-w-7xl mb-4 border-t border-marine-light backdrop-blur-sm bg-opacity-80">
-    <p>&copy; 2025 MineRise. All rights reserved. | Designed and powered by the MineRise Development Team.</p>
-    <p class="mt-2">MineRise — Built for the best, by the best.</p>
-</footer>
+    <section class="support-hub-bg py-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-16">
+                
+                <div class="flex-1 text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-paypal-blue/10 border border-paypal-blue/20 text-paypal-blue text-[9px] font-black uppercase tracking-widest mb-6">
+                        Secure Checkout
+                    </div>
+                    
+                    <h3 class="text-4xl md:text-5xl font-black uppercase italic tracking-tighter mb-6 leading-none">
+                        Processed by <span class="text-paypal-blue">PayPal</span>
+                    </h3>
+                    
+                    <p class="text-gray-500 text-lg mb-10 max-w-lg leading-relaxed">
+                        We use PayPal to ensure your transactions are handled safely. All purchases are processed instantly and your data remains private.
+                    </p>
 
-  </div
+                    <div class="flex flex-wrap gap-10">
+                        <div>
+                            <p class="text-[10px] font-black text-white uppercase tracking-[0.3em] mb-2">Security</p>
+                            <p class="text-xs text-gray-500 font-bold">Encrypted Payments</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-black text-white uppercase tracking-[0.3em] mb-2">Speed</p>
+                            <p class="text-xs text-gray-500 font-bold">Fast Delivery</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-black text-white uppercase tracking-[0.3em] mb-2">Region</p>
+                            <p class="text-xs text-gray-500 font-bold">Global Support</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-1 flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-paypal-blue/15 blur-[80px] rounded-full"></div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="w-64 md:w-80 paypal-float relative z-10" alt="PayPal Hub">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black text-center border-t border-white/5">
+        <p class="text-[9px] text-gray-700 font-bold uppercase tracking-[0.4em]">
+            &copy; 2025 MineRise &bull; Not Affiliated with Mojang AB
+        </p>
+    </footer>
+
+    <script>
+        // --- COLLECTION LOGIC ---
+        function buyItem(name, price) {
+            window.open(`https://paypal.me/MineRise/${price}`, '_blank');
+            let myStuff = JSON.parse(localStorage.getItem('mineRiseCollection')) || [];
+            if (!myStuff.includes(name)) {
+                myStuff.push(name);
+                localStorage.setItem('mineRiseCollection', JSON.stringify(myStuff));
+                renderInventory();
+            }
+        }
+
+        function renderInventory() {
+            const grid = document.getElementById('inventory-grid');
+            const empty = document.getElementById('empty-inventory');
+            const myStuff = JSON.parse(localStorage.getItem('mineRiseCollection')) || [];
+
+            if (myStuff.length > 0) {
+                grid.classList.remove('hidden');
+                empty.classList.add('hidden');
+                grid.innerHTML = myStuff.map(item => `
+                    <div class="glass p-4 rounded-xl text-center border-mine-accent/30">
+                        <div class="text-[8px] font-black text-mine-accent uppercase mb-1 tracking-tighter">Active Perk</div>
+                        <div class="text-[10px] font-bold uppercase italic">${item}</div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        // --- CURRENCY LOGIC ---
+        async function setupCurrency() {
+            try {
+                const geoRes = await fetch('https://ipapi.co/json/');
+                const geoData = await geoRes.json();
+                const cur = geoData.currency;
+                const rateRes = await fetch(`https://open.er-api.com/v6/latest/USD`);
+                const rateData = await rateRes.json();
+                const rate = rateData.rates[cur] || 1;
+
+                document.querySelectorAll('.price-tag').forEach(tag => {
+                    const usdVal = parseFloat(tag.getAttribute('data-usd'));
+                    const localVal = (usdVal * rate).toFixed(2);
+                    tag.innerText = `${cur === 'PKR' ? 'Rs' : cur} ${localVal}`;
+                });
+                document.getElementById('currency-notice').innerText = `Region Detected: ${geoData.country_name} (${cur})`;
+            } catch (e) {
+                document.getElementById('currency-notice').innerText = "Prices in USD";
+            }
+        }
+
+        window.onload = () => {
+            setupCurrency();
+            renderInventory();
+        };
+    </script>
 </body>
 </html>
-
